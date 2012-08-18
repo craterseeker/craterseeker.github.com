@@ -287,9 +287,10 @@ function initMainGlobe(callback) {
 		  
 		  
 	}, 
-	function(){
+	function(err){
 		//init failure : (
 		setProgress(10, "Failed Config of Main Globe");
+		appendDebug(err);
 	}, 
 	{ database: 'http://khmdb.google.com/?db=mars' });
 	  
